@@ -1,0 +1,238 @@
+/* Mobile and tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        flex-basis: 0px;
+        justify-content: flex-end;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .header__cart-wrap::before{
+        display: none;
+    }
+
+    .header__cart-list {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--header-height);
+        width: initial;
+    }
+
+    .header__cart-btn {
+        padding: 12px 16px;
+    }
+
+    .header__cart-item-delete {
+        padding: 6px 10px;
+    }
+
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .header__cart-list::after {
+        display: none;
+    }
+
+    .header__cart-list-heading {
+        margin: 8px 8px 12px;
+        text-align: left;
+    }
+
+    .header__tablet-bar {
+        text-align: left;
+        display: block;
+        width: 50px;
+        font-size: 2.4rem;
+        padding: 4px 0px;
+        color: var(--white-color);
+    }
+
+    .header__logo {
+        margin: 0 auto;
+        flex-basis: 0;
+        height: 100%;
+    }
+    .header__logo-link{
+        height: 100%;
+        display: flex;
+    }
+    @keyframes header__search_slide {
+        from {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .header__tablet-account {
+        display: block;
+        position: relative;
+    }
+
+    .header__sort {
+        display: flex;
+    }
+
+    .content-container {
+        padding-top: 0;
+        margin-top: calc(var(--header-height) + var(--header-sort-height));
+    }
+
+
+    .mobile-category{
+        display: block;
+    }
+    .mobile-category__list{
+        display: flex;
+    }
+    .product__container{
+        margin-top: 0;
+    }
+    .header__navbar-user-menu{
+        top: calc(100% + 10px);
+        right: -40%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+
+    .header__search {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--header-height);
+        padding: 0 16px;
+        z-index: 1;
+        animation: header__search_slide .3s linear;
+    }
+
+    .header__search-history {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+        top: calc(var(--header-height) + var(--header-sort-height));
+    }
+
+    .header__mobile-search {
+        display: block;
+        text-align: center;
+    }
+
+    .header__search-select {
+        padding: 6px 10px;
+        margin-top: 7px;
+        width: 134px;
+        text-align: center;
+    }
+    .pagionation-item {
+        margin: 0;
+    }
+
+    .pagionation-item-link {
+        font-size: 1.6rem;
+        padding: 6px 12px;
+    }
+    .footer__bottom-head{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .footer__bottom-head-link{
+        width: 33.33%;
+        padding: 0 20px;
+        border: none;
+    }
+    .footer__bottom-head-link:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer_item{
+        padding-left: 20px;
+        padding-bottom: 0px;
+    }
+    .footer__bottom-info{
+        padding: 0 20px;
+    }
+    .footer_item-heading{
+        min-height: initial;
+        margin-bottom: 14px;
+    }
+    .header__search-input{
+        padding-top: 7px;
+    }
+    .header__search-btn{
+        margin-top: 5px;
+    }
+    .header__logo-img{
+        width: 110px;
+    }
+    .header__tablet-bar{
+        width: 40px;
+    }
+    .header__cart-wrap {
+        padding: 4px 7px;
+    }
+    .header__tablet-account-img{
+        margin-left: 13px;
+    }
+
+    .header__navbar-user-menu {
+        right: -48%;
+    }
+    .header__search-option{
+        top: calc(100% + 2px);
+    }
+    .header__search-input{
+        padding-left: 0;
+    }
+    .header__search-btn{
+        width: 75px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+
+    .header__cart-item-name {
+        padding-right: 30px;
+    }
+
+    .header__cart-item-description {
+        padding-right: 70px;
+    }
+
+    .header__cart-list {
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-wrap {
+        width: 50px;
+        padding: 4px 0px;
+        text-align: right;
+    }
+}

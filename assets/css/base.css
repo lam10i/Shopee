@@ -1,0 +1,203 @@
+/* reset css */
+:root{
+    --text-color:#333;
+    --white-color:#fff;
+    --black-color:#000;
+    --primary-color:#EE4D2D;
+    --star-gold-color: #ffce3e;
+    --header-height:120px;
+    --navbar-height:34px;
+    --header-has-search-height:calc(var(--header-height) - var(--navbar-height));
+    --header-sort-height:46px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    font-size: 1.6rem;
+}
+.clear{
+    clear: both;
+}
+/* app */
+.app{
+    overflow: hidden;
+}
+/* Modals */
+.modal{
+    display: none;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .3);
+
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+
+    animation: fadeIn .2s ease-in;
+}
+.modal__container{
+    position: relative;
+    --scale-start:0.7;
+    --scale-end:1;
+    background-color: #fff;
+    border-radius: 5px;
+    animation: scale .2s linear;
+    overflow: hidden;
+}
+.modal__close-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.8rem;
+    width: 42px;
+    height: 34px;
+    cursor: pointer;
+}
+.modal__close-btn:hover{
+    background-color: #ff9e95;
+    color: var(--white-color);
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes scale{
+    from{
+        transform: scale(var(--scale-start));
+    }
+    to{
+        transform: scale(var(--scale-end));
+    }
+}
+/* btn */
+.btn{
+    min-width: 142px;
+    height: 36px;
+    border-radius: 2px;
+    padding: 0 12px;
+    padding-top: 3px;
+
+    border: none;
+    text-decoration: none;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: transparent;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn.btn--size-s{
+    min-width: 138px;
+    height: 32px;
+    padding: 0 8px;
+    font-size: 1.2rem;
+}
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+/* select input */
+.select{
+    background-color: var(--white-color);
+    min-width: 200px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+}
+.select__label{
+    font-size: 1.4rem;
+}
+.select__list{
+    display: none;
+    width: 100%;
+    padding: 8px 16px;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    list-style-type: none;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 4px rgba(0,0,0,.1) 
+}
+.select:hover .select__list{
+    display: block;
+}
+.select__item-link{
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--text-color);
+}
+.select__item-link:hover{
+    color: var(--primary-color);
+}
+.select__icon{
+    color: #838383;
+    font-size: 1.2rem;
+}
+/* pagination */
+.pagination{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagionation-item{
+    margin: 0 14px;
+}
+.pagionation-item--active .pagionation-item-link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 2px;
+}
+.pagionation-item--active:hover .pagionation-item-link{
+ background-color: #ee5c3f;   
+}
+.pagionation-item-link{
+    display: block;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #939393;
+    padding: 7px 14.4px;
+}
+.pagionation-item-link-icon{
+    font-size: 1.7rem;
+}
+/* icon */
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
